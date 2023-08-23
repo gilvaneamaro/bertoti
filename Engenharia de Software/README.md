@@ -13,11 +13,16 @@ mas em como esse sistema pode escalar, ser mais eficiente, facilitar sua manuten
 
 # 2- Exemplos de Trade-offs (Requisitos não funcionais)
 
-portabilidade x linguagem verbosa
+Um exemplo de trade off seria o desenvolvimento de programas em m𝗼𝗻𝗼𝗹𝗶𝘁o, ou seja, uma arquitetura de desenvolvimento de software que possui em um mesmo arquivo todos os componentes de uma aplicação como a interface do usuário, configuração do servidor e banco de dados.
+Vantagem: simplicidade, facilidade para desenvolver, testar e fazer o deploy.
+Desvantagem: dificuldade para escalar, lento na maioria dos casos e risco alto de falhas e inconsistências.
 
-usabilidade x segurança
+Em comparação com uma arquitetura em microserviços, que divide uma aplicação em serviços pequenos e pouco acoplados, sendo cada um deles responsável por uma capacidade de negócio específico.
+Vantagens: escalabilidades, flexibilidade, facilidade para manutenção e atualizações, permite rápida liberação de releases.
+Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta da conexão, requer um serviço robusto de monitoramento.
 
 # 3- Aplicar requisito não funcional
+
 usabilidade avaliando as 10 heuristicas (erros e acertos)
 
 
