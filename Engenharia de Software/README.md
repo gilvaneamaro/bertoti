@@ -30,5 +30,149 @@ usabilidade avaliando as 10 heuristicas (erros e acertos)
 ![DiagramaBiblioteca drawio](https://github.com/gilvaneamaro/bertoti/assets/121205315/58288615-5538-4a1b-9695-a0d0afd2f0ba)
 
 
+# 5- Inicie seu diagrama de classes UML fazendo junto com o código Java
+
+![Diagrama sem nome drawio (1)](https://github.com/gilvaneamaro/bertoti/assets/121205315/d68a2372-394c-4e27-a935-8c7338562f1b)
+
+# 6- Código Java implementando o diagrama de classe
+
+<details>
+  <summary>Códigos em JAVA</summary>
+
+- Classe Biblioteca
+```
+package entities;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Biblioteca {
+	private List<String> livros;
+	private List<Funcionario> funcionarios;
+		
+	
+	public Biblioteca() {
+	}
+	
+	public Biblioteca(List<String> livros, List<Funcionario> funcionarios) {
+		this.livros = livros;
+		this.funcionarios = funcionarios;
+	}
+
+
+	public List<String> getLivros() {
+		return livros;
+	}
+
+
+	public void setLivros(List<String> livros) {
+		this.livros = livros;
+	}
+
+
+	public List<Funcionario> getUsuarios() {
+		return funcionarios;
+	}
+
+
+	public void setUsuarios(List<Funcionario> funcionarios) {
+		this.funcionarios = funcionarios;
+	}
+	
+	
+	public List<Livros> buscarLivros(List<Livros> livros){
+		
+		List<Livros> livrosEncontrados = new LinkedList<Livros>();
+		for(Livros livro: livros) {
+			if(livro.equals(livro)) {
+				livrosEncontrados.add(livro);
+			}
+		}
+				
+		return livrosEncontrados;
+	}
+	
+	
+	public void addFuncionario(Funcionario funcionario) {
+		funcionarios.add(funcionario);
+		
+	}
+	
+
+}
+
+```
+- Classe Funcionario
+```
+package entities;
+
+public class Funcionario {	
+	private String nome;
+	private String cpf;
+	private Integer id;
+	
+	public Funcionario(String nome, String cpf, Integer id) {
+		this.nome = nome;
+		this.cpf = cpf;
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+}
+
+```
+- Classe Livros
+```
+package entities;
+
+public class Livros {
+	private String nome;
+	private Integer id;
+	
+	public Livros(String nome, Integer id) {
+		this.nome = nome;
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+}
+
+
+```
+
+
+</details>
 
 Livro eng de software - Ian Sommerville
