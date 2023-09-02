@@ -47,16 +47,16 @@ public class Livro {
 
 	@Override
 	public String toString() {
-		return "nome: " 
+		return "\nnome: " 
 				+ nome 
 				+ ",\neditora: " 
 				+ editora 
 				+ ",\nassunto: " 
 				+ assunto 
 				+ ",\nautor: " 
-				+ autor;
+				+ autor
+				+ "\n";
 	}
 	
 	
 }
-

@@ -37,7 +37,12 @@ public class Funcionario {
 
 	@Override
 	public String toString() {
-		return "nome: " + nome + ",\ncpf: " + cpf + ",\ncargo: " + cargo;
+		return "\nnome: " 
+				+ nome 
+				+ ",\ncpf: " 
+				+ cpf 
+				+ ",\ncargo: " 
+				+ cargo;
 	}
 	
 }

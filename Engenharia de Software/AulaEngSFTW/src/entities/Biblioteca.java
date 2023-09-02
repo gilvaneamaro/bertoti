@@ -47,11 +47,13 @@ public class Biblioteca {
 	}
 	
 	
-	public List<Livro> buscarLivros(List<Livro> livros){
+	public List<Livro> buscarLivros(String nomeDoLivro){
 		
 		List<Livro> livrosEncontrados = new LinkedList<Livro>();
+	
+		
 		for(Livro livro: livros) {
-			if(livro.equals(livro)) {
+			if(livro.getNome().equals(nomeDoLivro)) {
 				livrosEncontrados.add(livro);
 			}
 		}
