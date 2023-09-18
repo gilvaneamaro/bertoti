@@ -139,7 +139,9 @@ public class Funcionario {
 }
 
 ```
+
 - Classe Livros
+  
 ```
 package entities;
 
@@ -172,7 +174,73 @@ public class Livros {
 
 ```
 
-
 </details>
 
+# 7 - Testes com JUnity
+
+<details>
+<summary>Código dos testes</summary>
+
+```
+package application;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.LinkedList;
+import java.util.List;
+import org.junit.jupiter.api.Test;
+import entities.Biblioteca;
+import entities.Funcionario;
+import entities.Livro;
+
+class Teste {
+
+	@Test
+	void testBusca() {
+			
+			List<Livro> listaLivros = new LinkedList<Livro>();
+			
+			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
+			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
+			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
+			listaLivros.add(new Livro("Vendedor de Sonhos","Setembro Amarelo", "Augusto Cury","Autoajuda"));
+
+			List<Funcionario> listaFuncionario = new LinkedList<Funcionario>();
+			
+			listaFuncionario.add(new Funcionario("Jorge Books","132.456.789-00","Bibliotecario"));
+			listaFuncionario.add(new Funcionario("Pedrinho do TI","132.456.789-00","Analista de suporte"));
+			
+			Biblioteca lib = new Biblioteca("Biblioteca central",listaLivros,listaFuncionario);
+			
+			assertEquals(lib.buscarLivros("Harry Potter").size(), 3 );
+
+	}
+	@Test
+	void testNome() {
+		
+			List<Livro> listaLivros = new LinkedList<Livro>();
+			
+			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
+			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
+			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
+			listaLivros.add(new Livro("Vendedor de Sonhos","Setembro Amarelo", "Augusto Cury","Autoajuda"));
+
+			List<Funcionario> listaFuncionario = new LinkedList<Funcionario>();
+			
+			listaFuncionario.add(new Funcionario("Jorge Books","132.456.789-00","Bibliotecario"));
+			listaFuncionario.add(new Funcionario("Pedrinho do TI","132.456.789-00","Analista de suporte"));
+			
+			Biblioteca lib = new Biblioteca("Biblioteca central",listaLivros,listaFuncionario);
+			
+			assertEquals(lib.getNome(), "Biblioteca central" );
+	
+		
+	}
+}
+
+```
+
+<details>
+	
+</details>
 Livro eng de software - Ian Sommerville
