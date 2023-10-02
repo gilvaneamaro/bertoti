@@ -27,12 +27,22 @@ usabilidade avaliando as 10 heuristicas (erros e acertos)
 
 
 # 4- Fazer o diagrama de caso de uso (UML) de um sistema simples (Requisitos funcionais) 
+## Primeira versão
 ![DiagramaBiblioteca drawio](https://github.com/gilvaneamaro/bertoti/assets/121205315/58288615-5538-4a1b-9695-a0d0afd2f0ba)
+
+## Segunda versão
+![Modelo UML](https://github.com/gilvaneamaro/bertoti/assets/121205315/676de055-5a78-4795-ab68-798469903c66)
 
 
 # 5- Inicie seu diagrama de classes UML fazendo junto com o código Java
 
+## Primeira versão
 ![Diagrama sem nome drawio (1)](https://github.com/gilvaneamaro/bertoti/assets/121205315/d68a2372-394c-4e27-a935-8c7338562f1b)
+
+## Segunda versão
+
+![classes drawio](https://github.com/gilvaneamaro/bertoti/assets/121205315/2fd038e7-061a-4025-ba93-b37a5454b06d)
+
 
 # 6- Código Java implementando o diagrama de classe
 
