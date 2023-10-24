@@ -21,11 +21,39 @@ Em comparação com uma arquitetura em microserviços, que divide uma aplicaçã
 Vantagens: escalabilidades, flexibilidade, facilidade para manutenção e atualizações, permite rápida liberação de releases.
 Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta da conexão, requer um serviço robusto de monitoramento.
 
-# 3- Aplicar requisito não funcional
+# 3- 10 Usability Heuristics for User Interface Design
+## #1: Visibilidade do status do sistema
+- Um exemplo de bom uso desta eurística é um formulário evidenciar qual etapa o usuário está e quantas faltam.
+- Um mau uso seria o uso excessivo, podendo confundir o usuário.
 
-usabilidade avaliando as 10 heuristicas (erros e acertos)
+## #2: Match between system and the real world
+- Nesta eurística um exemplo legal é utilizar de uma figura de lixeira onde fica armazenado emails apagados de uma caixa de entrada.
+- Um exemplo incorreto seria 
 
-
+## #3: User control and freedom
+- O usuário poder sair no meio de um formulário sem perder a informações preenchidas é um bom exemplo.
+- Forçar o usuário a avançar todas as páginas, sem uma opção para sair antes, é um mau exemplo. 
+## #4: Consistency and standards
+- Importante um sistema seguir os padrões adotados, como por exemplo a cor verde para confirmar a inclusão de um item.
+- Um mau uso seria utilizar cores vermelhas em textos que não estão relacionados a erros.
+## #5: Error prevention
+- Um ótimo exemplo da aplicação desta eurísticas são telas de confirmações "Deseja mesmo excluir tal item?".
+- Um botão de "desistir" maior do que um botão de "confirmar" pode induzir usuários ao erro.
+## #6: Recognition rather than recall
+- Um exemplo de bom uso desta heurística é a barra de menu de um site de vendas poder ser vista em todas as páginas.
+- "Esconder" alguma funcionalidade, por exemplo o filtro dos produtos, em algum menu pode atrapalhar a utilização do site.
+## #7: Flexibility and efficiency of use
+- Esta heurística diz a respeito de poder beneficiar e agilizar através do uso de atalhos, por exemplo um CTRL+X para recortar um texto, ou até mesmo um conjunto de teclas para importar todas as bibliotecas utilizadas em um código.
+- A exigência de poder fazer uma ação por somente um passo específico é um exemplo de inflexibilidade de um sistema.
+#8: Aesthetic and minimalist design
+- Poder simplificar uma tela, removendo toda informação desnecessária é a utilização correta desta heurística.
+- Decorar muito um sistema com imagens exageradas é um ponto negativo.
+## #9: Help users recognize, diagnose, and recover from errors
+- Importante em um sistema exibir mensagens de erros que sejam amigáveis ao usuário, se possível utilizando de elementos gráficos.
+- Mensagens de erros não tratadas, impossibilitam que correções simples sejam aplicadas por parte do usuário.
+## #10: Help and documentation
+-
+-
 # 4- Fazer o diagrama de caso de uso (UML) de um sistema simples (Requisitos funcionais) 
 ## Primeira versão
 ![DiagramaBiblioteca drawio](https://github.com/gilvaneamaro/bertoti/assets/121205315/58288615-5538-4a1b-9695-a0d0afd2f0ba)
