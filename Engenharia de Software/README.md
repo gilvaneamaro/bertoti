@@ -22,38 +22,46 @@ Vantagens: escalabilidades, flexibilidade, facilidade para manutenção e atuali
 Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta da conexão, requer um serviço robusto de monitoramento.
 
 # 3- 10 Usability Heuristics for User Interface Design
-## #1: Visibilidade do status do sistema
-- Um exemplo de bom uso desta eurística é um formulário evidenciar qual etapa o usuário está e quantas faltam.
+## #1: Visibility of System Status
+- Um exemplo de bom uso desta heurística é um formulário evidenciar qual etapa o usuário está e quantas faltam.
 - Um mau uso seria o uso excessivo, podendo confundir o usuário.
 
 ## #2: Match between system and the real world
-- Nesta eurística um exemplo legal é utilizar de uma figura de lixeira onde fica armazenado emails apagados de uma caixa de entrada.
+- Nesta heurística um exemplo legal é utilizar de uma figura de lixeira onde fica armazenado emails apagados de uma caixa de entrada.
 - Um exemplo incorreto seria 
 
 ## #3: User control and freedom
 - O usuário poder sair no meio de um formulário sem perder a informações preenchidas é um bom exemplo.
-- Forçar o usuário a avançar todas as páginas, sem uma opção para sair antes, é um mau exemplo. 
+- Forçar o usuário a avançar todas as páginas, sem uma opção para sair antes, é um mau exemplo.
+  
 ## #4: Consistency and standards
 - Importante um sistema seguir os padrões adotados, como por exemplo a cor verde para confirmar a inclusão de um item.
 - Um mau uso seria utilizar cores vermelhas em textos que não estão relacionados a erros.
+  
 ## #5: Error prevention
-- Um ótimo exemplo da aplicação desta eurísticas são telas de confirmações "Deseja mesmo excluir tal item?".
+- Um ótimo exemplo da aplicação desta heurística são telas de confirmações "Deseja mesmo excluir tal item?".
 - Um botão de "desistir" maior do que um botão de "confirmar" pode induzir usuários ao erro.
+  
 ## #6: Recognition rather than recall
 - Um exemplo de bom uso desta heurística é a barra de menu de um site de vendas poder ser vista em todas as páginas.
 - "Esconder" alguma funcionalidade, por exemplo o filtro dos produtos, em algum menu pode atrapalhar a utilização do site.
+  
 ## #7: Flexibility and efficiency of use
 - Esta heurística diz a respeito de poder beneficiar e agilizar através do uso de atalhos, por exemplo um CTRL+X para recortar um texto, ou até mesmo um conjunto de teclas para importar todas as bibliotecas utilizadas em um código.
 - A exigência de poder fazer uma ação por somente um passo específico é um exemplo de inflexibilidade de um sistema.
-#8: Aesthetic and minimalist design
+  
+## #8: Aesthetic and minimalist design
 - Poder simplificar uma tela, removendo toda informação desnecessária é a utilização correta desta heurística.
 - Decorar muito um sistema com imagens exageradas é um ponto negativo.
+  
 ## #9: Help users recognize, diagnose, and recover from errors
 - Importante em um sistema exibir mensagens de erros que sejam amigáveis ao usuário, se possível utilizando de elementos gráficos.
 - Mensagens de erros não tratadas, impossibilitam que correções simples sejam aplicadas por parte do usuário.
+  
 ## #10: Help and documentation
--
--
+- Um bom exemplo da aplicação desta heurística são teclas de atalhos que exibem informações adicionais sobre certos campos, um outro exemplo são tutoriais que são exibidos na primeira vez que uma página é aberta.
+  
+
 # 4- Fazer o diagrama de caso de uso (UML) de um sistema simples (Requisitos funcionais) 
 ## Primeira versão
 ![DiagramaBiblioteca drawio](https://github.com/gilvaneamaro/bertoti/assets/121205315/58288615-5538-4a1b-9695-a0d0afd2f0ba)
