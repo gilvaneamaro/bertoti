@@ -62,7 +62,7 @@ Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta d
 - Um bom exemplo da aplicação desta heurística são teclas de atalhos que exibem informações adicionais sobre certos campos, um outro exemplo são tutoriais que são exibidos na primeira vez que uma página é aberta.
   
 
-# 4- Fazer o diagrama de caso de uso (UML) de um sistema simples (Requisitos funcionais) 
+# 4- Fazer o diagrama de caso de uso de um sistema simples (Requisitos funcionais) 
 ## Primeira versão
 ![DiagramaBiblioteca drawio](https://github.com/gilvaneamaro/bertoti/assets/121205315/58288615-5538-4a1b-9695-a0d0afd2f0ba)
 
@@ -93,25 +93,35 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Biblioteca {
-	private List<String> livros;
+	private String nome;
+	private List<Livro> livros;
 	private List<Funcionario> funcionarios;
 		
 	
 	public Biblioteca() {
 	}
 	
-	public Biblioteca(List<String> livros, List<Funcionario> funcionarios) {
+	public Biblioteca(String nome, List<Livro> livros, List<Funcionario> funcionarios) {
+		this.nome = nome;
 		this.livros = livros;
 		this.funcionarios = funcionarios;
 	}
 
 
-	public List<String> getLivros() {
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public List<Livro> getLivros() {
 		return livros;
 	}
 
 
-	public void setLivros(List<String> livros) {
+	public void setLivros(List<Livro> livros) {
 		this.livros = livros;
 	}
 
@@ -126,11 +136,13 @@ public class Biblioteca {
 	}
 	
 	
-	public List<Livros> buscarLivros(List<Livros> livros){
+	public List<Livro> buscarLivros(String nomeDoLivro){
 		
-		List<Livros> livrosEncontrados = new LinkedList<Livros>();
-		for(Livros livro: livros) {
-			if(livro.equals(livro)) {
+		List<Livro> livrosEncontrados = new LinkedList<Livro>();
+	
+		
+		for(Livro livro: livros) {
+			if(livro.getNome().startsWith(nomeDoLivro)) {
 				livrosEncontrados.add(livro);
 			}
 		}
@@ -143,8 +155,16 @@ public class Biblioteca {
 		funcionarios.add(funcionario);
 		
 	}
-	
 
+	@Override
+	public String toString() {
+		return "nome: " 
+				+ nome 
+				+ "\npossui os livros: " 
+				+ livros 
+				+ ",\nos funcionarios são: " 
+				+ funcionarios;
+	}
 }
 
 ```
@@ -228,13 +248,15 @@ public class Livros {
 <summary>Código dos testes</summary>
 
 ```
-package application;
+package utils;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
+
 import entities.Biblioteca;
 import entities.Funcionario;
 import entities.Livro;
@@ -246,10 +268,13 @@ class Teste {
 			
 			List<Livro> listaLivros = new LinkedList<Livro>();
 			
-			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
-			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
-			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
-			listaLivros.add(new Livro("Vendedor de Sonhos","Setembro Amarelo", "Augusto Cury","Autoajuda"));
+			listaLivros.add(new Livro("Harry Potter e a pedra filosofal", "Rocco", "JK Rowling", "Aventura", 1997));
+			listaLivros.add(new Livro("Harry Potter e a camara secreta", "Rocco", "JK Rowling", "Aventura", 1998));
+			listaLivros.add(new Livro("Harry Potter e o prisioneiro de azkabhan", "Rocco", "JK Rowling", "Aventura", 1999));
+			listaLivros.add(new Livro("Harry Potter e o calice de fogo", "Rocco", "JK Rowling", "Aventura", 2000));
+			listaLivros.add(new Livro("Harry Potter e a ordem da fenix", "Rocco", "JK Rowling", "Aventura", 2003));
+			listaLivros.add(new Livro("Harry Potter e o enigma do principe", "Rocco", "JK Rowling", "Aventura", 2005));
+			listaLivros.add(new Livro("Harry Potter e as relíquias da morte", "Rocco", "JK Rowling", "Aventura", 2007));
 
 			List<Funcionario> listaFuncionario = new LinkedList<Funcionario>();
 			
@@ -258,7 +283,7 @@ class Teste {
 			
 			Biblioteca lib = new Biblioteca("Biblioteca central",listaLivros,listaFuncionario);
 			
-			assertEquals(lib.buscarLivros("Harry Potter").size(), 3 );
+			assertEquals(lib.buscarLivros("Harry Potter").size(),7 );
 
 	}
 	@Test
@@ -266,10 +291,13 @@ class Teste {
 		
 			List<Livro> listaLivros = new LinkedList<Livro>();
 			
-			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
-			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
-			listaLivros.add(new Livro("Harry Potter", "Arqueiro", "JK Rowling", "Aventura"));
-			listaLivros.add(new Livro("Vendedor de Sonhos","Setembro Amarelo", "Augusto Cury","Autoajuda"));
+			listaLivros.add(new Livro("Harry Potter e a pedra filosofal", "Rocco", "JK Rowling", "Aventura", 1997));
+			listaLivros.add(new Livro("Harry Potter e a camara secreta", "Rocco", "JK Rowling", "Aventura", 1998));
+			listaLivros.add(new Livro("Harry Potter e o prisioneiro de azkabhan", "Rocco", "JK Rowling", "Aventura", 1999));
+			listaLivros.add(new Livro("Harry Potter e o calice de fogo", "Rocco", "JK Rowling", "Aventura", 2000));
+			listaLivros.add(new Livro("Harry Potter e a ordem da fenix", "Rocco", "JK Rowling", "Aventura", 2003));
+			listaLivros.add(new Livro("Harry Potter e o enigma do principe", "Rocco", "JK Rowling", "Aventura", 2005));
+			listaLivros.add(new Livro("Harry Potter e as relíquias da morte", "Rocco", "JK Rowling", "Aventura", 2007));
 
 			List<Funcionario> listaFuncionario = new LinkedList<Funcionario>();
 			
@@ -282,11 +310,8 @@ class Teste {
 	
 		
 	}
+
 }
 
 ```
-
-<details>
-	
-</details>
 Livro eng de software - Ian Sommerville
