@@ -25,27 +25,51 @@ Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta d
 ## #1: Visibility of System Status
 - Um exemplo de bom uso desta heurística é um formulário evidenciar qual etapa o usuário está e quantas faltam.
 - Um mau uso seria o uso excessivo, podendo confundir o usuário.
+  ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/869ff34d-77bc-4a02-af23-f69bbbdc9e72)
+
 
 ## #2: Match between system and the real world
 - Nesta heurística um exemplo legal é utilizar de uma figura de lixeira onde fica armazenado emails apagados de uma caixa de entrada.
-- Um exemplo incorreto seria 
+  ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/c0142fff-c823-4bdb-8980-171415cb7998)
+
+- Um exemplo incorreto seria a página About do site AbacusNext, com linguagem técnica e jargões do ramo da advocacia.
+![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/f2d5ea95-9524-44b6-bece-eaed437b2a70)
 
 ## #3: User control and freedom
 - O usuário poder sair no meio de um formulário sem perder a informações preenchidas é um bom exemplo.
-- Forçar o usuário a avançar todas as páginas, sem uma opção para sair antes, é um mau exemplo.
+![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/e2735d4d-1ca8-4978-b295-a3ccf103651c)
+
+- Forçar o usuário a avançar todas as páginas, sem uma opção para sair antes, é um mau exemplo
+- O trello esconde opção EXCLUIR o cartao
+  ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/a7d586fe-eee3-4c10-bb5e-b15ce27a9c26)
+- Sendo necessário clicar em Compartilhar para localizar a opção de excluor.
+  ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/ac09986b-40ab-41df-9e39-a95f4610641b)
+
+
   
 ## #4: Consistency and standards
 - Importante um sistema seguir os padrões adotados, como por exemplo a cor verde para confirmar a inclusão de um item.
+  ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/803e16e8-aee5-40d0-b507-7cc78a89eca0)
+
 - Um mau uso seria utilizar cores vermelhas em textos que não estão relacionados a erros.
+  ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/4ebd9a5c-08cd-4113-a384-2db6490e0cbd)
+
   
 ## #5: Error prevention
 - Um ótimo exemplo da aplicação desta heurística são telas de confirmações "Deseja mesmo excluir tal item?".
-- Um botão de "desistir" maior do que um botão de "confirmar" pode induzir usuários ao erro.
+- ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/9a194a67-8656-4b29-8c69-29f58ae9deb2)
+
+- No software DOC-Windows, ao imprimir uma minuta de segunda via, o sistema não faz a validação do tipo do registro, podendo imprimir uma minuta de primeira via através de um registro de PRIMEIRA VIA.
+  ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/e886636e-5ce0-45dd-be2b-5b0d247956de)
+
   
 ## #6: Recognition rather than recall
 - Um exemplo de bom uso desta heurística é a barra de menu de um site de vendas poder ser vista em todas as páginas.
-- "Esconder" alguma funcionalidade, por exemplo o filtro dos produtos, em algum menu pode atrapalhar a utilização do site.
-  
+- No software DOC-Windows, as configurações relacionadas aos módulos estão separadas em alguns menus, sendo necessário o usuário se lembre em qual caminho altera certa preferência.
+  ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/5d2a862f-e9f8-456a-9259-b5fa3dec160d)
+  ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/dc11ae3c-6e9d-4b55-9e67-6115e3cedeaa)
+
+
 ## #7: Flexibility and efficiency of use
 - Esta heurística diz a respeito de poder beneficiar e agilizar através do uso de atalhos, por exemplo um CTRL+X para recortar um texto, ou até mesmo um conjunto de teclas para importar todas as bibliotecas utilizadas em um código.
 - A exigência de poder fazer uma ação por somente um passo específico é um exemplo de inflexibilidade de um sistema.
