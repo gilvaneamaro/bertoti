@@ -13,13 +13,15 @@ mas em como esse sistema pode escalar, ser mais eficiente, facilitar sua manuten
 
 # 2- Exemplos de Trade-offs (Requisitos não funcionais)
 
-Um exemplo de trade off seria o desenvolvimento de programas em m𝗼𝗻𝗼𝗹𝗶𝘁o, ou seja, uma arquitetura de desenvolvimento de software que possui em um mesmo arquivo todos os componentes de uma aplicação como a interface do usuário, configuração do servidor e banco de dados.
+- Um exemplo de trade off seria o desenvolvimento de programas em m𝗼𝗻𝗼𝗹𝗶𝘁o, ou seja, uma arquitetura de desenvolvimento de software que possui em um mesmo arquivo todos os componentes de uma aplicação como a interface do usuário, configuração do servidor e banco de dados.
 Vantagem: simplicidade, facilidade para desenvolver, testar e fazer o deploy.
 Desvantagem: dificuldade para escalar, lento na maioria dos casos e risco alto de falhas e inconsistências.
 
-Em comparação com uma arquitetura em microserviços, que divide uma aplicação em serviços pequenos e pouco acoplados, sendo cada um deles responsável por uma capacidade de negócio específico.
+ - Em comparação com uma arquitetura em microserviços, que divide uma aplicação em serviços pequenos e pouco acoplados, sendo cada um deles responsável por uma capacidade de negócio específico.
 Vantagens: escalabilidades, flexibilidade, facilidade para manutenção e atualizações, permite rápida liberação de releases.
 Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta da conexão, requer um serviço robusto de monitoramento.
+
+-  Um outro exemplo de trade off é em banco de daods, bancos de dados relacionais são ideais para aplicações que exigem consistência e integridade de dados, enquanto os bancos de dados não relacionais são mais adequados para aplicações que exigem alta escalabilidade e flexibilidade no esquema de dados. 
 
 # 3- 10 Usability Heuristics for User Interface Design
 ## #1: Visibility of System Status
@@ -36,10 +38,9 @@ Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta d
 ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/f2d5ea95-9524-44b6-bece-eaed437b2a70)
 
 ## #3: User control and freedom
-- O usuário poder sair no meio de um formulário sem perder a informações preenchidas é um bom exemplo.
+- O usuário poder desfazer ou refazer uma ação, é um bom exemplo.
 ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/e2735d4d-1ca8-4978-b295-a3ccf103651c)
 
-- Forçar o usuário a avançar todas as páginas, sem uma opção para sair antes, é um mau exemplo
 - O trello esconde opção EXCLUIR o cartao
   ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/a7d586fe-eee3-4c10-bb5e-b15ce27a9c26)
 - Sendo necessário clicar em Compartilhar para localizar a opção de excluor.
@@ -48,10 +49,10 @@ Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta d
 
   
 ## #4: Consistency and standards
-- Importante um sistema seguir os padrões adotados, como por exemplo a cor verde para confirmar a inclusão de um item.
+- Um bom exemplo seriam os sites de e-commerce que respeitam a ordem, pesquisa seguido pelo carrinho de compras e o acesso a conta do usuário.
   ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/803e16e8-aee5-40d0-b507-7cc78a89eca0)
 
-- Um mau uso seria utilizar cores vermelhas em textos que não estão relacionados a erros.
+- Um mau uso seria utilizar cores semelhantes para botões que possuem funcionalidades diferentes.
   ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/4ebd9a5c-08cd-4113-a384-2db6490e0cbd)
 
   
@@ -60,12 +61,13 @@ Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta d
 - ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/9a194a67-8656-4b29-8c69-29f58ae9deb2)
 
 - No software DOC-Windows, ao imprimir uma minuta de segunda via, o sistema não faz a validação do tipo do registro, podendo imprimir uma minuta de primeira via através de um registro de PRIMEIRA VIA.
-  ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/e886636e-5ce0-45dd-be2b-5b0d247956de)
-
+  ![base de conhecimento](https://github.com/gilvaneamaro/bertoti/assets/121205315/5335c497-a536-4636-9ec7-8fb1b6e35371)
   
 ## #6: Recognition rather than recall
 - Um exemplo de bom uso desta heurística é a barra de menu de um site de vendas poder ser vista em todas as páginas.
 - No software DOC-Windows, as configurações relacionadas aos módulos estão separadas em alguns menus, sendo necessário o usuário se lembre em qual caminho altera certa preferência.
+
+
   ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/5d2a862f-e9f8-456a-9259-b5fa3dec160d)
   ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/dc11ae3c-6e9d-4b55-9e67-6115e3cedeaa)
 
@@ -89,7 +91,7 @@ Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta d
   
 ## #10: Help and documentation
 - Um bom exemplo da aplicação desta heurística são teclas de atalhos que exibem informações adicionais sobre certos campos, um outro exemplo são tutoriais que são exibidos na primeira vez que uma página é aberta.
-  ![erro demaria](https://github.com/gilvaneamaro/bertoti/assets/121205315/797bdea7-f251-4b29-9161-8ac3402f68a1)
+![base de conhecimento](https://github.com/gilvaneamaro/bertoti/assets/121205315/90e3e730-68e0-457f-9eba-3e219ccf9fbf)
 
 
 # 4- Fazer o diagrama de caso de uso de um sistema simples (Requisitos funcionais) 
