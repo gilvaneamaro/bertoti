@@ -77,14 +77,20 @@ Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta d
 ## #8: Aesthetic and minimalist design
 - Poder simplificar uma tela, removendo toda informação desnecessária é a utilização correta desta heurística.
 - Decorar muito um sistema com imagens exageradas é um ponto negativo.
+- ![DOc](https://github.com/gilvaneamaro/bertoti/assets/121205315/5e14c73d-aca4-4048-bf7e-74b8aabb338c)
+
+
   
 ## #9: Help users recognize, diagnose, and recover from errors
 - Importante em um sistema exibir mensagens de erros que sejam amigáveis ao usuário, se possível utilizando de elementos gráficos.
 - Mensagens de erros não tratadas, impossibilitam que correções simples sejam aplicadas por parte do usuário.
+  ![erro demaria](https://github.com/gilvaneamaro/bertoti/assets/121205315/bed8cd36-af26-434f-8138-fc4308529392)
+
   
 ## #10: Help and documentation
 - Um bom exemplo da aplicação desta heurística são teclas de atalhos que exibem informações adicionais sobre certos campos, um outro exemplo são tutoriais que são exibidos na primeira vez que uma página é aberta.
-  
+  ![erro demaria](https://github.com/gilvaneamaro/bertoti/assets/121205315/797bdea7-f251-4b29-9161-8ac3402f68a1)
+
 
 # 4- Fazer o diagrama de caso de uso de um sistema simples (Requisitos funcionais) 
 ## Primeira versão
