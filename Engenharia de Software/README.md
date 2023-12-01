@@ -41,9 +41,9 @@ Desvantagens: dificulade em administrar multiplos serviços, tempo de resposta d
 - O usuário poder desfazer ou refazer uma ação, é um bom exemplo.
 ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/e2735d4d-1ca8-4978-b295-a3ccf103651c)
 
-- O trello esconde opção EXCLUIR o cartao
+- O trello esconde opção EXCLUIR o cartão de atividade:
   ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/a7d586fe-eee3-4c10-bb5e-b15ce27a9c26)
-- Sendo necessário clicar em Compartilhar para localizar a opção de excluor.
+- Sendo necessário clicar em Compartilhar para localizar a opção de excluir.
   ![image](https://github.com/gilvaneamaro/bertoti/assets/121205315/ac09986b-40ab-41df-9e39-a95f4610641b)
 
 
