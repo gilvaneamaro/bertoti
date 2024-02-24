@@ -9,10 +9,12 @@ import java.util.UUID;
 public class Celular {
     private String modelo;
     private String marca;
+    private Integer id;
     public Celular(){};
 
-    public Celular(String modelo, String marca) {
+    public Celular(String modelo, String marca, Integer id) {
         this.modelo = modelo;
         this.marca = marca;
+        this.id = id;
     }
 }
