@@ -8,3 +8,5 @@
 ![img_1.png](img_1.png)
 - Procura e deleta o aparelho, através do método DELETE
 ![img_2.png](img_2.png)
+- Lista todos os aparelhos através do método GET
+![img_3.png](img_3.png)
