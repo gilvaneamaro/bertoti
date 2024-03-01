@@ -2,6 +2,9 @@
 - Aplicação desenvolvida nas aulas de Laboratório III
 
 ### Preview testes requisições no Postman
-- Requisições POST, GET e DELETE
+- Adicionado um celular através da Requisição POST
 ![img.png](img.png)
-
+- Atualizado o aparelho, filtrando pelo ID fornecido no body, requisição PUT
+![img_1.png](img_1.png)
+- Procura e deleta o aparelho, através do método DELETE
+![img_2.png](img_2.png)
