@@ -2,7 +2,6 @@ package com.primeirocrud.crudlabiii;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,14 +27,17 @@ public class RestController {
 
     @DeleteMapping
     ResponseEntity deleteCelular(@RequestBody Celular celular){
-        for(Celular cel: listCelular){
+
+        listCelular.clear();
+        /*for(Celular cel: listCelular){
             if(cel.getId().equals(celular.getId()) && cel.getMarca().equals(celular.getMarca()) && cel.getModelo().equals(celular.getModelo())){
                 listCelular.remove(cel);
                 return ResponseEntity.status(HttpStatus.OK).body("Aparelho removido com sucesso!");
 
             }
-        }
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Aparelho não encontrado!");
+        }*/
+
+        return ResponseEntity.status(HttpStatus.OK).body("Lista limpa.");
    }
 
    @PutMapping

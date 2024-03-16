@@ -1,14 +1,32 @@
-h1{
-    color:blue;
-    width: 50%;
-}
 body{
-    background-image: url("./assets/fundo.jpeg");
+    background-image: url("./assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 40vh;
+    margin: 0;
+    font-family:  sans-serif;
+
 }
 
 form{
+    align-items: center;
     color: white;
-    background-color: rgba(120,255,120, 0.2);
-    width: 30%;
-    padding: 36px;
+    background-color: rgba(120,120,120, 0.8);
+    width: max-content;
+    padding: 20px;
+    border: solid 3px #cccccc;
+    border-radius: 5px;
+
+}
+
+table{
+    background-color: white;
 }

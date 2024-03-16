@@ -1,82 +1,126 @@
-i= 0
-function uuidv4() {
-    return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
-        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-    );
-}
 
-
-const btnAdd = document.getElementById('submitBtn')
-function Adicionar() {
-    axios.post('http://localhost:8080/celular', { modelo: inputModelo.value, marca: inputMarca.value, id: inputID}) .then(response => {
-        console.log("Celular adicionado com sucesso!", response.data)
-    })
-}
-
-btnAdd.addEventListener('click',Adicionar)
-document.addEventListener("DOMContentLoaded", () => {
-
-    fetch("http://localhost:8080/celular", {
-        method:"POST",
-        mode:"CORS",
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('http://localhost:8080/celular', {
+        method: 'GET',
         headers: {
-            "Content-Type":"application/json"
-        }
+            'Content-Type': 'application/json'
+        },
+        body:null
     })
         .then(response => response.json())
         .then(data => {
+            // Aqui você pode acessar o conteúdo do body retornado pelo backend
+            console.log(data);
 
-            const listCelular = document.getElementById("celular-list");
-            data.forEach(celular => {
-                const listItem = document.createElement("li");
-                const deleteButton = document.createElement('button')
-                const upItem = document.createElement("input")
-                const upButton = document.createElement("button");
-                const inputID = document.getElementById('inputID')
-                const modelo = document.getElementById('modelo')
-                inputID.setAttribute('value',uuidv4())
-                upButton.innerHTML = "Editar nome";
-                deleteButton.innerHTML = "Excluir";
-                listItem.textContent = celular.name;
-                listCelular.appendChild(listItem);
-                listCelular.appendChild(upItem);
-                listCelular.appendChild(upButton);
-                listCelular.appendChild(deleteButton);
-                upButton.setAttribute('id',i);
+            var produtos = data;
+            console.log("Chegou aqui");
 
-                upButton.setAttribute('class','btn btn-primary')
-                deleteButton.setAttribute('class','btn btn-danger')
-                i++;
-                upButton.addEventListener('click',Update)
-                deleteButton.addEventListener('click', Excluir)
-                function Update(){
-                    upItemValor = upItem.value;
-                    axios.put("http://localhost:8080/celular/"+celular.id , { id: celular.id, name: upItemValor })
-                        .then(response => {
-                            console.log("Celular atualizado com sucesso:", response.data)
-                            listItem.innerText = upItemValor
-                        })
-                        .catch(error => {
-                            console.error("Erro ao atualizar o celular:", error);
-                        });
+            // Referência do elemento HTML da tabela
+            var tableBody = document.getElementById("table-body");
+
+            // Função para exibir os aparelhos na tabela
+            function mostrarAparelhos() {
+                // Limpa o conteúdo da tabela antes de adicionar os novos aparelhos
+                tableBody.innerHTML = "";
+
+                // Loop pelos produtos e adiciona cada um à tabela
+                produtos.forEach(function(produto) {
+                    var row = tableBody.insertRow();
+                    var cellModelo = row.insertCell(0);
+                    var cellMarca = row.insertCell(1);
+                    var cellID = row.insertCell(2);
+
+                    cellModelo.textContent = produto.modelo;
+                    cellMarca.textContent = produto.marca;
+                    cellID.textContent = produto.ID;
+                });
+
+                // Exibe a tabela
+                document.getElementById("table").style.display = "table";
+            }
+
+            // Adiciona um evento de clique ao botão "Mostrar Aparelhos"
+            document.getElementById("mostrar-aparelhos").addEventListener("click", mostrarAparelhos);
 
 
-                }
 
-                function Excluir(){
-                    axios.delete("http://localhost:8080/celular/"+celular.id, { id: celular.id })
-                        .then(response =>{
-                            console.log('Deletado', response.data)
-                            upButton.remove()
-                            deleteButton.remove()
-                            listItem.remove()
-                            upItem.remove()
-                        })
-                        .catch(error => {
-                            console.error("Erro ao deletar", error)
-                        })
-                }
-
-            });
+        })
+        .catch(error => {
+            console.error('Erro ao enviar JSON:', error);
         });
+    // JSON com as informações dos produtos
+
 });
+
+function listarAparelhos(){
+    fetch('http://localhost:8080/celular', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:null
+    }).then(response => response.json())
+        .then(data => {
+            // Aqui você pode acessar o conteúdo do body retornado pelo backend
+            console.log(data);
+        })
+        .catch(error => {
+                console.error('Erro ao enviar JSON:', error);
+        });
+
+}
+
+function enviarJSON() {
+    // Obter os valores dos inputs
+    var modelo = document.getElementById("modelo").value;
+    var marca = document.getElementById("marca").value;
+    var id = document.getElementById("id").value;
+
+
+    // Criar um objeto JSON
+    var data = {
+        modelo: modelo,
+        marca: marca,
+        id: id
+    };
+
+    // Converter o objeto JSON para uma string
+    var jsonData = JSON.stringify(data);
+
+    // Enviar os dados para o backend (aqui simularia a requisição POST)
+    fetch('http://localhost:8080/celular/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: jsonData
+    })
+        .then(response => {
+            if (response.ok) {
+                mostrarNotificacao("Aparelho cadastrado com sucesso!");
+            } else {
+                mostrarNotificacao("Erro ao enviar JSON.");
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao enviar JSON:', error);
+        });
+}
+
+function mostrarNotificacao(mensagem) {
+    // Verificar se o navegador suporta notificações
+    if (!("Notification" in window)) {
+        alert("Este navegador não suporta notificações.");
+    } else if (Notification.permission === "granted") {
+        // Se as notificações estão permitidas, mostrar notificação
+        new Notification(mensagem);
+    } else if (Notification.permission !== 'denied') {
+        // Se as notificações não estão bloqueadas, solicitar permissão
+        Notification.requestPermission().then(function (permission) {
+            // Se a permissão for concedida, mostrar notificação
+            if (permission === "granted") {
+                new Notification(mensagem);
+            }
+        });
+    }
+}
