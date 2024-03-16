@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário para Envio de JSON</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>BEM VINDO AO MEU SITE</h1>
+<p>CADASTRE O SEU CELULAR</p>
+<h2>Cadastro de aparelhos</h2>
+<form id="form">
+    <label for="modelo">Modelo:</label><br>
+    <input type="text" id="modelo" name="modelo"><br>
+    <label for="marca">Marca:</label><br>
+    <input type="text" id="marca" name="marca"><br>
+    <label for="id">ID:</label><br>
+    <input type="text" id="id" name="id"><br><br>
+    <button type="button" onclick="enviarJSON()">Cadastrar</button>
+    <div id="mensagem"></div>
+</form>
+
+<script>
+    function enviarJSON() {
+        // Obter os valores dos inputs
+        var modelo = document.getElementById("modelo").value;
+        var marca = document.getElementById("marca").value;
+        var id = document.getElementById("id").value;
+
+
+        // Criar um objeto JSON
+        var data = {
+            modelo: modelo,
+            marca: marca,
+            id: id
+        };
+
+        // Converter o objeto JSON para uma string
+        var jsonData = JSON.stringify(data);
+
+        // Enviar os dados para o backend (aqui simularia a requisição POST)
+        fetch('http://localhost:8080/celular/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonData
+        })
+            .then(response => {
+                if (response.ok) {
+                    mostrarNotificacao("Aparelho cadastrado com sucesso!");
+                } else {
+                    mostrarNotificacao("Erro ao enviar JSON.");
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao enviar JSON:', error);
+            });
+    }
+
+    function mostrarNotificacao(mensagem) {
+        // Verificar se o navegador suporta notificações
+        if (!("Notification" in window)) {
+            alert("Este navegador não suporta notificações.");
+        } else if (Notification.permission === "granted") {
+            // Se as notificações estão permitidas, mostrar notificação
+            new Notification(mensagem);
+        } else if (Notification.permission !== 'denied') {
+            // Se as notificações não estão bloqueadas, solicitar permissão
+            Notification.requestPermission().then(function (permission) {
+                // Se a permissão for concedida, mostrar notificação
+                if (permission === "granted") {
+                    new Notification(mensagem);
+                }
+            });
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+h1{
+    color:blue;
+    width: 50%;
+}
+body{
+    background-image: url("./assets/fundo.jpeg");
+}
+
+form{
+    color: white;
+    background-color: rgba(120,255,120, 0.2);
+    width: 30%;
+    padding: 36px;
+}

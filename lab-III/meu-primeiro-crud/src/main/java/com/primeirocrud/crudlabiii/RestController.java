@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping("/celular")
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class RestController {
     private final List<Celular> listCelular = new ArrayList<>();
 
@@ -20,10 +20,10 @@ public class RestController {
     }
 
 
-    @PostMapping
-    Celular postCelular(@RequestBody Celular celular) {
+    @PostMapping("/")
+    ResponseEntity postCelular(@RequestBody Celular celular) {
         listCelular.add(celular);
-        return celular;
+        return ResponseEntity.status(HttpStatus.OK).body("Aparelho cadastrado com sucesso!");
     }
 
     @DeleteMapping
