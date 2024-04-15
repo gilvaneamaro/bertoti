@@ -1,1 +1,0 @@
----INSERT INTO celular (modelo, marca, descricao) VALUES ("iPhone 12 Pro", "Apple", "256GB Preto");
