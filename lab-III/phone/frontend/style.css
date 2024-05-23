@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+
+table {
+    width: 100%; 
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+
+*{
+  font-family: "Freeman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+#loadBtn{
+    margin-bottom: 26px;
+    padding: 0px 20px;
+}
+
+#btn{
+    margin-left: 6px;
+    padding: 0px 20px;
+}
+
+
+
+#loadBtn:hover{
+    transform: rotate(1800deg);
+
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+#cadastro_id{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 26px;
+}
+
+#botoes_id{
+    display: flex;
+    justify-content: center;
+}
+
+.linha{
+    width: 100%;
+}
+
+td{
+    padding: 0 10px;
+}
+th{
+    background-color: #585858;
+    padding: 0 10px;
+    border: solid #ccc 1px;
+}
+
+.botoes_linha{
+    display: flex;
+    justify-content: center;
+
+}
+
+#acoes_id{
+    text-align: center;
+}
+
+
+.table-container {
+    max-height: 450px;
+    overflow-y: auto;
+    margin: 0 auto;
+    width: 80%;
+  }
