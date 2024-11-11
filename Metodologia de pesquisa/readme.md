@@ -5,15 +5,13 @@
 Meu nome é Gilvane, tenho 29 anos, sou um desenvolvedor dedicado com foco em soluções escaláveis com qualidade. Já cursei 8 semestre de ciência e tecnologia pela UNIFESP, entre 2014 a 2018, porém não cheguei a concluir. Atualmente estou no quarto semestre de tecnólogo em banco de dados pela Fatec São José dos Campos e trabalho como analista de suporte pela DeMaria Software, empresa especializada em sistemas de automação para cartórios.
 
 
-## Contatos
+## Contato
 * [GIT](https://www.github.com/gilvaneamaro)
 * [LinkedIn](www.linkedin.com/in/gilvane-amaro)
 
-## Meus Principais Conhecimentos
+## Principais Conhecimentos
 
 Possuo conhecimento em lógica de programação e desenvolvimento web, já utilizei Frameworks como Spring boot e VueJs3. Minha experiência com bancos de dados inclui MySQL para dados relacionais.
-
-
 Possuo familiaridade com metodologias ágeis, especialmente Scrum, para gerenciamento de projetos. Tenho experiência na visualização de mapas utilizando MapTile, o que me permite lidar com projetos que envolvem tanto o back-end quanto o front-end de forma eficaz.
 
 ## Meus Projetos
@@ -40,21 +38,24 @@ Foram utilizadas as ferramentas: Spring Boot para desenvolver o Back-end Web Ser
     - Gerenciamento de usuário
           <details>
             Na criação precisei incluir uma lista de Role e outra de empresas que poderiam ser vinculados ao usuário, o que dificultou a lógica. Na deleção do usuário precisei remover todos os vínculos para que o banco de dados aceitasse a remoção. Tive dificuldades na implementação dos serviços, sendo necessário pensar bem quais injeções de dependências seriam possíveis, sem que houvesse looping.
+      ![image](https://github.com/user-attachments/assets/7f1faad9-872c-465a-9fe2-b94d727ff4e5)
           </details>
     - Níveis de acessos dos usuários
           <details>
               Desenvolvi um algoritmo capaz atribuir diferentes níveis de acessos aos usuários, foi preciso ajustar o código que já existia, pois inicialmente cada usuário teria apenas um acesso. Após a refatoração, a aplicação passou a realizar validações para acessar os métodos.
-
+      
+        ![image](https://github.com/user-attachments/assets/05096707-1100-45bc-8b71-43e83c70ca5f)
           </details>
     - Download do arquivo CSV
           <details>
              Criei um algoritmo que recuperava os metadados do banco de dados e enviava um binário com a configuração do banco de dados em arquivo YML. Utilizei a biblioteca snakeyaml para conseguir manipular o arquivo e enviar o arquivo.
+      ![image](https://github.com/user-attachments/assets/ea165536-6157-4b2c-8a44-54ba858695ce)
           </details>
           
     - Implementação do spring security
-        <details>
-             De longe a task mais difícil que entreguei, realizei toda a configuração do Spring Security, implementando o token, validação e encriptação de senhas. Tive muitas dificuldades para conseguir manipular o token, atribuir propriedades como roles e tempo de expiração.
-      
+            <details>
+            De longe a task mais difícil que entreguei, realizei toda a configuração do Spring Security, implementando o token, validação e encriptação de senhas. Tive muitas dificuldades para conseguir manipular o token, atribuir propriedades como roles e tempo de expiração.
+            ![image](https://github.com/user-attachments/assets/bedadc9e-0479-4880-9449-a5486b220650)
         </details>
  
 
