@@ -30,7 +30,14 @@ Para resolver esse problema, a equipe desenvolveu o NextSchema, uma aplicação 
 Acesso ao repositório disponível <a href="https://github.com/TechHorizonBR/API_3SEM.git">aqui</a>.
 
 #### Tecnologias Utilizadas
-Foram utilizadas as ferramentas: Spring Boot para desenvolver o Back-end Web Server, MySQL para banco de dados relacional, BR-Modelos para modelagem de dados, Figma para prototipação de Wareframes, HTML, CSS e JS para Front-end, Jira para gerenciamento de projetos, Git para versionamento de projetos e Github para armazenamento e publicação de arquivos.
+- Spring Boot para desenvolver o Back-end Web Server
+- MySQL para banco de dados relacional
+- BR-Modelos para modelagem de dados
+- Figma para prototipação de Wareframes
+- HTML, CSS e JS para Front-end
+- Jira para gerenciamento da equipe e projetos
+- Git para versionamento de projetos
+- Github para armazenamento e publicação de arquivos.
 
 #### Contribuições Pessoais
 - Durante o projeto trabalhei apenas como back-end e fui responsável pela implementação do Spring Security e gerenciamento dos usuários, atuando na criação de endpoints para adicionar, atualizar e remover usuários. 
